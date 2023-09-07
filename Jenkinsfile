@@ -1,8 +1,16 @@
 pipeline {
-  agent any
+  agent any 
   tools {
     maven 'maven'
   }
+    options {
+    buildDiscarder(logRotator(numToKeepStr: '5'))
+  }
+  environment {
+    DOCKERHUB_CREDENTIALS = credentials('dockerhub')
+  }
+
+
   stages{
     stage('1-git-clone'){
       steps{
@@ -21,6 +29,34 @@ pipeline {
     }
     stage('sonarscanner'){
       steps{ echo " Got it" }
+    }
+  stage('create docker image'){
+      steps{
+    
+        script{
+            sh 'docker build -t gerryik/stockmanager:0.0.1 .'
+        }
+      }
+    }
+    
+
+    stage('Login') {
+      steps {
+        sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
+      }
+    }
+    
+        stage('Push') {
+      steps {
+        sh 'docker push gerryik/stockmanager:0.0.1 '
+      }
+    }
+
+    }
+    
+  post {
+    always {
+      sh 'docker logout'
     }
   }
 }
