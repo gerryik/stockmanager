@@ -1,0 +1,7 @@
+uk/co/gagbonye/djshopping/stockmanager/config/DataGenerator.class
+uk/co/gagbonye/djshopping/stockmanager/services/StockService.class
+uk/co/gagbonye/djshopping/stockmanager/model/Stock.class
+uk/co/gagbonye/djshopping/stockmanager/resources/StockResource.class
+uk/co/gagbonye/djshopping/stockmanager/repositories/StockRepository.class
+uk/co/gagbonye/djshopping/stockmanager/exceptions/StockNotFoundException.class
+uk/co/gagbonye/djshopping/stockmanager/StockManagerApplication.class

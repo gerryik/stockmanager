@@ -1,0 +1,7 @@
+/Users/daddy/projects/argocdProd/stockmanager/src/main/java/uk/co/gagbonye/djshopping/stockmanager/exceptions/StockNotFoundException.java
+/Users/daddy/projects/argocdProd/stockmanager/src/main/java/uk/co/gagbonye/djshopping/stockmanager/model/Stock.java
+/Users/daddy/projects/argocdProd/stockmanager/src/main/java/uk/co/gagbonye/djshopping/stockmanager/StockManagerApplication.java
+/Users/daddy/projects/argocdProd/stockmanager/src/main/java/uk/co/gagbonye/djshopping/stockmanager/repositories/StockRepository.java
+/Users/daddy/projects/argocdProd/stockmanager/src/main/java/uk/co/gagbonye/djshopping/stockmanager/services/StockService.java
+/Users/daddy/projects/argocdProd/stockmanager/src/main/java/uk/co/gagbonye/djshopping/stockmanager/config/DataGenerator.java
+/Users/daddy/projects/argocdProd/stockmanager/src/main/java/uk/co/gagbonye/djshopping/stockmanager/resources/StockResource.java
