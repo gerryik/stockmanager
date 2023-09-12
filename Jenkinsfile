@@ -34,7 +34,7 @@ pipeline {
       steps{
     
         script{
-            sh 'docker build -t gerryik/stockmanager:0.0.1 .'
+            sh 'docker build -t gerryik/stockmanager .'
         }
       }
     }
@@ -48,7 +48,7 @@ pipeline {
     
         stage('Push') {
       steps {
-        sh 'docker push gerryik/stockmanager:0.0.1 '
+        sh 'docker push gerryik/stockmanager'
       }
     }
 
